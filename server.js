@@ -2,8 +2,7 @@ var express = require('express');
 var app =express();
 
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI);
-
+mongoose.connect('mongodb://' + process.env.MLAB_USERNAME + ':' + process.env.MLAB_PASSWORD + '@ds053146.mlab.com:53146/codefiasco-sites');
 var Schema = mongoose.Schema;
 
 var urlSchema = new Schema({
